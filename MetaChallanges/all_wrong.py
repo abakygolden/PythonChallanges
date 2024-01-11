@@ -1,7 +1,14 @@
 # Write any import statements here
 
-def get_wrong_answers(n: int, c: str) -> str:
-  # Write your code here
-  return c + str(n);
+def getWrongAnswers(N: int, C: str) -> str:
+    result = ""
+    for index in range(N):
+        character = C[index]
+        if character == "A":
+            result += "B"
+        else:
+            result += "A"
+    return result;
 
-print(get_wrong_answers(1,"a"))
+
+print(getWrongAnswers(5, "BBBBB"))
